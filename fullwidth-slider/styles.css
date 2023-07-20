@@ -1,0 +1,131 @@
+:root {
+    --orange-pilled: #f2a900;
+    --theme-plain-white: #fff;
+    --theme-off-white: #f2f2f2;
+    --theme-dark: #000;
+    --theme-darkish: #333;
+
+    --theme-clr1: #43cca2;
+    --theme-clr2: #185a9d;
+    --theme-clr3: #ff4e50;
+    --theme-clr4: #f9d423;
+    --theme-clr5: #9d50bb;
+    --theme-clr6: #6e48aa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.fw-slider .container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: var(--theme-dark);
+    overflow: hidden;
+}
+
+.tabs input {
+    visibility: hidden;
+    display: none;
+}
+
+.tabs .btns {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10000000;
+}
+
+.tabs .btns label {
+    width: 20px;
+    height: 20px;
+    background: var(--theme-plain-white);
+    opacity: 0.5;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.tabs input:nth-child(1):checked ~ .btns label:nth-child(1),
+.tabs input:nth-child(2):checked ~ .btns label:nth-child(2),
+.tabs input:nth-child(3):checked ~ .btns label:nth-child(3)
+{
+    opacity: 1;
+    width: 50px;
+}
+
+.tabs .content {
+    position: relative;
+    width: 300vw;
+    display: flex;
+    transition: 0.5s;
+}
+
+.tabs .content .box {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    padding: 40px;
+}
+
+.tabs .content .box.web { background: linear-gradient(90deg, var(--theme-clr1), var(--theme-clr2)) }
+.tabs .content .box.graphics { background: linear-gradient(90deg, var(--theme-clr3), var(--theme-clr4)) }
+.tabs .content .box.photography { background: linear-gradient(90deg, var(--theme-clr5), var(--theme-clr6)) }
+
+.tabs input:nth-child(1):checked ~ .content  { left: 0; }
+.tabs input:nth-child(2):checked ~ .content  { left: -100vw; }
+.tabs input:nth-child(3):checked ~ .content  { left: -200vw; }
+
+.tabs .content .box .content-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tabs .content .box .content-box ion-icon {
+    font-size: 12em;
+    color: var(--theme-plain-white);
+    --ionicon-stroke-width: 16px;
+}
+
+.tabs .content .box .content-box h2 {
+    font-size: 3em;
+    color: var(--theme-plain-white);
+}
+
+.tabs .content .box .content-box p {
+    font-size: 1.2em;
+    color: var(--theme-plain-white);
+    max-width: 700px;
+    text-align: center;
+}
+
+.tabs .content .box .content-box button {
+    font-size: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 35px;
+    background: var(--theme-plain-white);
+    color: var(--theme-darkish);
+    letter-spacing: 0.05em;
+    margin-top: 10px;
+    font-weight: 600;
+    border: none;
+    border-radius: 40px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.tabs .content .box .content-box button:hover { letter-spacing: 0.2em; }
