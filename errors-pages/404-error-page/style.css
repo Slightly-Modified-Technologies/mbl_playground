@@ -1,0 +1,139 @@
+
+:root {
+    --orange-pilled: #f2a900;
+    --theme-plain-white: #fff;
+    --theme-off-white: #f2f2f2;
+    --theme-dark: #000;
+
+    --sky1: #0f0c29;
+    --sky2: #302b63;
+    --sky3: #3a3a3a;
+    --sky4: #2c3e50;
+    --sky5: var(--theme-dark);
+    --theme1: #6e2308;
+    --theme2: #51680c;
+    --theme3: #001b29;
+    --theme4: #003459;
+    --ground1: #2c2c2c;
+    --ground2: #191919;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'consolas', sans-serif;
+}
+
+section.error {
+    min-height: 100vh;
+    /* background: linear-gradient(0deg, var(--sky1), var(--sky2)); */
+    background: linear-gradient(0deg, var(--sky2), var(--sky4));
+}
+
+.sky {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sky h2 {
+    font-size: 16em;
+    color: var(--theme-plain-white);
+    /* text-shadow: 15px 15px 0 rgb(255, 255, 255, 0.1); */
+    text-shadow: 15px 15px 0 rgb(0, 0, 0, 0.15);
+}
+
+.sky h2 span.err-num {
+    display: inline-block;
+    animation: animeErrNumbers 2s ease-in-out infinite;
+}
+.sky h2 span.err-num:nth-child(even) { animation-delay: -1s; }
+
+.field {
+    padding: 100px;
+    height: 40vh;
+    background: var(--ground1);
+    box-shadow: inset 0 20px 10px var(--ground2);
+    text-align: center;
+}
+
+.field h2 {
+    color: var(--theme-plain-white);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.field a {
+    background: var(--theme-plain-white);
+    color: var(--theme-dark);
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.plane {
+    position: absolute;
+    bottom: 200px;
+    left: 100px;
+    max-width: 300px;
+    animation: animePlane 0.5s ease-in-out infinite;
+}
+
+.car {
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    max-width: 300px;
+    z-index: 1;
+    animation: animeCar 0.5s ease-in-out infinite;
+}
+
+/* TODO: add .skyline (for a city skyline night view) go find the video that has the img section border of a skyline! it's in your playlist! */
+.grass {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background: url('./assets/grass.png');
+    background-position: bottom;
+    animation: animeGrass 0.2s linear infinite;
+}
+
+
+
+/* Animations */
+@keyframes animeErrNumbers {
+    0%, 100% { transform: translateY(-50px); }
+    50% { transform: translateY(50px); }
+}
+
+/* TODO: add .skyline (for a city skyline night view) go find the video that has the img section border of a skyline! it's in your playlist! */
+@keyframes animeGrass {
+    0% { background-position: 94px 0; }
+    100% { background-position: 0 0; }
+}
+
+@keyframes animePlane {
+    0%,100% { transform: translateY(-5px); }
+    50% { transform: translateY(5px); }
+}
+
+@keyframes animeCar {
+    0%,100% { transform: translateY(-0.25px); }
+    50% { transform: translateY(0.25px); }
+}
+
+
+/* TODO: Add css for field text! */
+/* Responsive Design */
+@media (max-width: 480px) {
+    .sky h2 { font-size: 10em; z-index: 0; }
+}
