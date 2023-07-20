@@ -1,5 +1,4 @@
-# THe HTML CSS JS Playground
+# Animated Login Component
 
-I will add all the projects using just HTML CSS and Javascript here 1 by 1 :)
-
-I Will come back and make this read me link to each project and be a cool readme.
+A very nice animation border login screen, it needs to be updated to fit mobile sm screens better, fixing the containers would probably be best
+There is no Javascript to this it's plain template ready to plugin auth.
