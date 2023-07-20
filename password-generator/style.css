@@ -1,0 +1,109 @@
+:root {
+    --orange-pilled: #f2a900;
+    --theme-plain-white: #fff;
+    --theme-off-white: #f2f2f2;
+    --theme-bg-main: #28102d;
+    --theme-dark: #000;
+
+    --color1: #f8f8f8;
+    --color2: #333;
+    --color3: #9c27b0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: consolas;
+    user-select: none;
+}
+
+
+section#pw-generator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background: var(--color1);
+}
+
+.pw-box {
+    position: relative;
+    width: 450px;
+}
+
+.pw-box h2 {
+    font-size: 28px;
+    color: var(--color2)
+}
+
+.pw-box input {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    border: none;
+    margin: 15px 0 20px;
+    background: transparent;
+    outline: none;
+    padding: 0 20px;
+    font-size: 24px;
+    letter-spacing: 4px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: var(--color2);
+    box-shadow: -4px -4px 10px rgb(255, 255, 255, 1),
+                inset 4px 4px 10px rgb(0, 0, 0, 0.05),
+                inset -4px -4px 10px rgb(255, 255, 255, 1),
+                4px 4px 10px rgb(0, 0, 0, 0.05);
+}
+
+.pw-box input::placeholder { letter-spacing: 0; }
+
+.pw-box #btn {
+    position: relative;
+    cursor: pointer;
+    color: var(--theme-plain-white);
+    background: var(--color2);
+    font-size: 24px;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.pw-box #btn:active { background: var(--color3); }
+
+.fa-copy {
+    position: absolute;
+    top: 64px;
+    right: 15px;
+    cursor: pointer;
+    opacity: 0.2;
+    font-size: x-large;
+    transition: 0.5s;
+}
+.fa-copy:hover { opacity: 1; }
+
+.alert-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--color3);
+    color: var(--theme-plain-white);
+    text-align: center;
+    font-size: 4em;
+    display: none;
+}
+
+.alert-box.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Pointless User Data box! */
+.user-details {
+    padding-top: 5vh;
+    margin-left: -30vh;
+}
