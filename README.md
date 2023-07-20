@@ -1,5 +1,3 @@
-# THe HTML CSS JS Playground
+# Password Generator with Clipboard
 
-I will add all the projects using just HTML CSS and Javascript here 1 by 1 :)
-
-I Will come back and make this read me link to each project and be a cool readme.
+We created this we also added a little place for the IP to show up since this is for local usage only :)
