@@ -1,5 +1,3 @@
-# THe HTML CSS JS Playground
+# Social Media Icon Fab Buttons w/ Hover effects
 
-I will add all the projects using just HTML CSS and Javascript here 1 by 1 :)
-
-I Will come back and make this read me link to each project and be a cool readme.
+We created some really cool looking hovering fab buttons that really pop up the screeen lol
