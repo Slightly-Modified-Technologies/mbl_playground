@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+:root {
+    --orange-pilled: #f2a900;
+    --theme-plain-white: #fff;
+    --theme-off-white: #f2f2f2;
+    --theme-bg-main: #0e1538;
+    --theme-dark: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section .neon-pop-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    background: var(--theme-bg-main);
+}
+
+.neon-pop-box a.pop-btn {
+    position: relative;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0, 0.5);
+    margin: 40px;
+    transition: 1s;
+    text-decoration: none;
+    overflow: hidden;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, transparent, #0004);
+}
+.neon-pop-box a.pop-btn:hover {
+    background: var(--pop-clr);
+    box-shadow:
+        0 0 10px var(--pop-clr),
+        0 0 30px var(--pop-clr),
+        0 0 60px var(--pop-clr),
+        0 0 100px var(--pop-clr);
+}
+
+.neon-pop-box a.pop-btn::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 400%;
+    background: var(--pop-clr);
+    transition: 1s;
+    animation: borderCirclesAnime 2s linear infinite;
+    animation-delay: calc(0.33s * var(--i));
+}
+.neon-pop-box a.pop-btn:hover::before { width: 120%; }
+
+.neon-pop-box a.pop-btn::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: var(--theme-bg-main);
+    transition: 0.5s;
+}
+.neon-pop-box a.pop-btn:hover::after { background: var(--pop-clr); }
+
+.neon-pop-box a.pop-btn span {
+    position: relative;
+    z-index: 1;
+    font-size: 2em;
+    color: var(--theme-plain-white);
+    opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: 0.5s;
+}
+.neon-pop-box a.pop-btn:hover span { opacity: 1; }
+
+
+
+/* Animations */
+@keyframes borderCirclesAnime {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
