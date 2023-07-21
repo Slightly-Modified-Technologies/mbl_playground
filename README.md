@@ -1,5 +1,3 @@
-# THe HTML CSS JS Playground
+# Directional Image Hover Effect
 
-I will add all the projects using just HTML CSS and Javascript here 1 by 1 :)
-
-I Will come back and make this read me link to each project and be a cool readme.
+Here we have a couple of images that have a really cool float in float out text with directional detection. mouse in and mouse out starts and ends where you hover over the images.
