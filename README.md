@@ -1,5 +1,3 @@
-# THe HTML CSS JS Playground
+# Glass Morphism Effects
 
-I will add all the projects using just HTML CSS and Javascript here 1 by 1 :)
-
-I Will come back and make this read me link to each project and be a cool readme.
+We have created an collection of cool tilting and morphing blurring components to reuse on other projects all using HTML CSS JS and importing some really smart peoples code via script tags.
