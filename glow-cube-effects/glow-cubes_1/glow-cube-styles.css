@@ -11,7 +11,7 @@ body {
 }
 
 section {
-    position: absolute;
+    position: absolute; /* Note: You can comment this out for cool positioning */
     width: 100%;
     height: 100%;
     display: flex;
@@ -24,7 +24,8 @@ section {
 .box {
     position: absolute;
     transform-style: preserve-3d;
-    top: 125px;
+    top: 200px;
+    /* top: 125px; */ /* Revert these to push cube back to TOP */
 }
 
 .box .cube {
