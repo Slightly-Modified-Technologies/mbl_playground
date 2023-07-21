@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section.full-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://images.unsplash.com/photo-1626060451577-8b90a394e355?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+section.full-bg .page-title {
+    font-size: 5em;
+    color: #fff;
+    pointer-events: none;
+    text-shadow: 0 10px 20px rgb(0, 0, 0, 0.5);
+}
+
+section.full-bg .glass {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    pointer-events: none;
+    text-shadow: 0 20px 50px rgb(0, 0, 0, 0.2);
+    background: transparent;
+    backdrop-filter: blur(10px);
+    transition: 0.15s;
+}
