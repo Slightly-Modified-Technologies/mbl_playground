@@ -1,5 +1,3 @@
-# THe HTML CSS JS Playground
+# FingerPrint Scanner / NFT reveal
 
-I will add all the projects using just HTML CSS and Javascript here 1 by 1 :)
-
-I Will come back and make this read me link to each project and be a cool readme.
+We created a really cool fingerprint scanner - that reveals a different color fingerprint as the neon line goes down, we can comment a few things out and replace the background images to do NFT nambi tree reveal. ( actually that's default so revert what I just said LOL )
