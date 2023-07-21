@@ -1,5 +1,3 @@
-# THe HTML CSS JS Playground
+# Glow Cube Effects
 
-I will add all the projects using just HTML CSS and Javascript here 1 by 1 :)
-
-I Will come back and make this read me link to each project and be a cool readme.
+Here we have created a library of really cool cube effects rotating offsets and cool directional hovering and colors. pull them down and check them out.
