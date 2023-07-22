@@ -1,5 +1,3 @@
-# THe HTML CSS JS Playground
+# Animated Stat Progress Bars
 
-I will add all the projects using just HTML CSS and Javascript here 1 by 1 :)
-
-I Will come back and make this read me link to each project and be a cool readme.
+A really nice wall plaque record wall decor style animated progress bars with percentages to be customized for whatever. 
