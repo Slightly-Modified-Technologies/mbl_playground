@@ -3,7 +3,6 @@
     --theme-plain-white: #fff;
     --theme-off-white: #f2f2f2;
     --theme-dark: #000;
-
     --smoke-txt-clr: #ddd;
     --smoke-bg: #f00;
     --smoke-bg2: #0f0;
@@ -63,8 +62,6 @@ section.smoked::before {
 .smoked h1 span:nth-child(3) { animation-delay: 2.5s; }
 .smoked h1 span:nth-child(4) { animation-delay: 3s; }
 .smoked h1 span:nth-child(5) { animation-delay: 3.5s; }
-.smoked h1 span:nth-child(6) { animation-delay: 4s; }
-.smoked h1 span:nth-child(7) { animation-delay: 4.5s; }
 
 
 /* Animations */
