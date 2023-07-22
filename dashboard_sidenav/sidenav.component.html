@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard Sidenav Component</title>
+    <link rel="stylesheet" href="./sidenav.component.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- https://fontawesome.com/v4/icons/ -->
+</head>
+<!-- TODO: 1: Update nav to be on right side and anime r2l VS left side anime l2r -->
+<!-- TODO: 2: Convert css -> scss -->
+<!-- TODO: 3: IF: not move sidenav to right, maybe just move the hamburger close icon! -->
+<!-- TODO: 4: Make the nav items dynamic! js: NAV_ITEMS: [{t:"",d,"",...}] -->
+<body>
+    <div class="sidenav">
+        <ul class="sidenav-list">
+            <li class="sn-item ">
+                <a href="#" class="item-link">
+                    <span class="sn-icon">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </span>
+                    <span class="sn-title">Home</span>
+                </a>
+            </li>
+            <li class="sn-item">
+                <a href="#" class="item-link">
+                    <span class="sn-icon">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                    <span class="sn-title">Profile</span>
+                </a>
+            </li>
+            <li class="sn-item">
+                <a href="#" class="item-link">
+                    <span class="sn-icon">
+                        <i class="fa fa-gavel" aria-hidden="true"></i>
+                    </span>
+                    <span class="sn-title">My Bids</span>
+                </a>
+            </li>
+            <li class="sn-item">
+                <a href="#" class="item-link">
+                    <span class="sn-icon">
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                        <!-- <i class="fa fa-binoculars" aria-hidden="true"></i> -->
+                        <!-- <i class="fa fa-star" aria-hidden="true"></i> -->
+                    </span>
+                    <span class="sn-title">Reviews</span>
+                </a>
+            </li>
+            <li class="sn-item">
+                <a href="#" class="item-link">
+                    <span class="sn-icon">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    </span>
+                    <span class="sn-title">Help</span>
+                </a>
+            </li>
+            <li class="sn-item">
+                <a href="#" class="item-link">
+                    <span class="sn-icon">
+                        <i class="fa fa-cogs" aria-hidden="true"></i>
+                    </span>
+                    <span class="sn-title">Settings</span>
+                </a>
+            </li>
+            <li class="sn-item">
+                <a href="#" class="item-link">
+                    <span class="sn-icon">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                    </span>
+                    <span class="sn-title">Password</span>
+                </a>
+            </li>
+            <li class="sn-item">
+                <a href="#" class="item-link">
+                    <span class="sn-icon">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </span>
+                    <span class="sn-title">Sign Out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="toggle-sidenav" onclick="toggleSideNav();">
+    </div>
+
+    <!-- Logic for easy_integration here -->
+    <script>
+
+        function toggleSideNav() {
+            let sideNav = document.querySelector('.sidenav');
+            let toggle  = document.querySelector('.toggle-sidenav');
+            sideNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+    </script>
+</body>
+</html>
