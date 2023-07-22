@@ -1,5 +1,7 @@
-# THe HTML CSS JS Playground
+# Info Card Effect Collection
 
-I will add all the projects using just HTML CSS and Javascript here 1 by 1 :)
+We have three different styled info cards with animations, each has a different style and these components are built to be inserted in to projects with a few style updates. We need to go update a few images text titles etc
 
-I Will come back and make this read me link to each project and be a cool readme.
+## Note
+
+WE have kept the animated profile cards in this branch for ease of finding. I forgot or I would have just put it in here. however it's not just an info card it's a PROFILE CARD :)
