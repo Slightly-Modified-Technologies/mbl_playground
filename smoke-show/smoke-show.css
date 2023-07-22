@@ -1,0 +1,82 @@
+:root {
+    --orange-pilled: #f2a900;
+    --theme-plain-white: #fff;
+    --theme-off-white: #f2f2f2;
+    --theme-dark: #000;
+
+    --smoke-txt-clr: #ddd;
+    --smoke-bg: #f00;
+    --smoke-bg2: #0f0;
+    --smoke-bg3: #0ff;
+    --smoke-bg4: #ff0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'consolas', sans-serif;
+}
+
+section.smoked {
+    min-height: 100vh;
+    background: var(--theme-dark);
+}
+
+section.smoked::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, var(--smoke-bg), var(--smoke-bg), var(--smoke-bg2), var(--smoke-bg3), var(--smoke-bg4), var(--smoke-bg3));
+    mix-blend-mode: color;
+    pointer-events: none;
+}
+
+.smoked video {
+    object-fit: cover;
+    margin-left: 19em;
+}
+
+.smoked h1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: var(--theme-plain-white);
+    font-size: 5vw;
+    letter-spacing: 0.2em;
+}
+
+.smoked h1 span {
+    opacity: 0;
+    display: inline-block;
+    animation: txt-fade 1s linear forwards;
+}
+.smoked h1 span:nth-child(1) { animation-delay: 1.5s; }
+.smoked h1 span:nth-child(2) { animation-delay: 2s; }
+.smoked h1 span:nth-child(3) { animation-delay: 2.5s; }
+.smoked h1 span:nth-child(4) { animation-delay: 3s; }
+.smoked h1 span:nth-child(5) { animation-delay: 3.5s; }
+.smoked h1 span:nth-child(6) { animation-delay: 4s; }
+.smoked h1 span:nth-child(7) { animation-delay: 4.5s; }
+
+
+/* Animations */
+@keyframes txt-fade {
+    0% {
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0);
+    }
+}
