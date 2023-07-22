@@ -1,7 +1,5 @@
 # THe HTML CSS JS Playground
 
-I will add all the projects using just HTML CSS and Javascript here 1 by 1 :)
-
 I Will come back and make this read me link to each project and be a cool readme.
 
 ## Note
@@ -11,3 +9,7 @@ We have stopped after doing all the projects up to the playground mashup, I don'
 ### TODO
 
 - GO Through and take images and add them to each components read me :) also add some links to each branch here.
+
+## Additional Note
+
+I have also compressed zipped the components projects and added them to this. it's got the originally written code in it. I will also be putting that on an HDD external storage device for memory keepsake.
