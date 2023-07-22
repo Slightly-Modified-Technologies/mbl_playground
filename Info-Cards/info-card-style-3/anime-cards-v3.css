@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+:root {
+    --orange-pilled: #f2a900;
+    --theme-plain-white: #fff;
+    --theme-off-white: #f2f2f2;
+    --theme-dark: #000;
+    --card-clr-1: #333;
+    --card-line-1: #45f3ff;
+    --card-line-2: #ff3c7b;
+    --card-bg-clr: #292929;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section.anime-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: var(--card-clr-1);
+}
+
+.anime-cards div.card-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 80px 40px;
+    gap: 80px;
+}
+
+.anime-cards div.card-container .card {
+    position: relative;
+    width: 350px;
+    height: 180px;
+    background: var(--card-clr-1);
+    transition: 0.5s;
+}
+.anime-cards div.card-container .card:hover { height: 450px; }
+
+.anime-cards div.card-container .card .card-lines {
+    position: absolute;
+    inset: 0;
+    background: #000;
+    overflow: hidden;
+}
+
+.anime-cards div.card-container .card .card-lines::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 120PX;
+    background: linear-gradient(transparent, var(--card-line-1), var(--card-line-1), var(--card-line-1), transparent);
+    animation: lineAnimate 4s linear infinite;
+    animation-play-state: paused;
+}
+.anime-cards div.card-container .card:hover .card-lines::before { animation-play-state: running; }
+
+.anime-cards div.card-container .card .card-lines::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: var(--card-bg-clr);
+}
+
+.anime-cards div.card-container .card .card-img {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    width: 150px;
+    height: 150PX;
+    transform: translateX(-50%);
+    background: var(--theme-dark);
+    transition: 0.5s;
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.anime-cards div.card-container .card:hover .card-img {
+    top: 25px;
+    width: 200px;
+    height: 200PX;
+}
+
+.anime-cards div.card-container .card .card-img::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 150PX;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(transparent, var(--card-line-2), var(--card-line-2), var(--card-line-2), transparent);
+    animation: lineImgAnimate 4s linear infinite;
+    animation-play-state: paused;
+}
+.anime-cards div.card-container .card:hover .card-img::before { animation-play-state: running; }
+
+.anime-cards div.card-container .card .card-img::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: var(--card-bg-clr);
+}
+
+.anime-cards div.card-container .card .card-img img {
+    position: absolute;
+    width: 100px;
+    z-index: 1;
+    filter: invert(1);
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.anime-cards div.card-container .card:hover .card-img img {
+    opacity: 1;
+    width: 150px;
+}
+
+.anime-cards div.card-container .card .card-content {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.anime-cards div.card-container .card .card-content .details {
+    padding: 30px 20px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(120px);
+}
+.anime-cards div.card-container .card:hover .card-content .details { transform: translateY(-15px); }
+
+.anime-cards div.card-container .card .card-content .details h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--card-line-1);
+    line-height: 1.2em;
+}
+
+.anime-cards div.card-container .card .card-content .details p {
+    color: var(--theme-plain-white);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.anime-cards div.card-container .card .card-content .details a.card-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background: var(--card-line-1);
+    color: var(--card-bg-clr);
+    margin-top: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+.anime-cards div.card-container .card:hover .card-content .details p,
+.anime-cards div.card-container .card:hover .card-content .details a.card-link {
+    opacity: 1;
+}
+
+
+
+
+/* Animations */
+@keyframes lineAnimate {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes lineImgAnimate {
+    0% { transform: translate(-50%, -50%) rotate(360deg); }
+    100% { transform: translate(-50%, -50%) rotate(0deg); }
+}
